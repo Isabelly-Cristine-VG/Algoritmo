@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleExercicios.css">
+    <title>exercicio1</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="background">
+            <form action="">
+                <div>
+                    <button type="button" onclick="receber()">Receber 100</button>
+                    <button type="button" onclick="pagar()">Pagar 50</button>
+                </div>
+            </form>
+            <div id="Saldo">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        saldo = 0;
+        function receber(){
+            saldo = saldo + 100;
+            Saldo.innerHTML = 
+            `
+            <form action="">
+                <h1>Transferência recebida!</h1>
+                <h1>Saldo atual: R$${saldo}</h1>
+            </form>
+            `
+        }
+        function pagar(){
+            saldo = saldo - 50;
+            Saldo.innerHTML = 
+            `
+            <form action="">
+                <h1>Pagamento efetuado!</h1>
+                <h1>Saldo atual: R$${saldo}</h1>
+            </form>
+            `
+        }
+    </script>
+</body>
+</html>

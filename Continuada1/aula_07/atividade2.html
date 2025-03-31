@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="renda"> digite a renda familiar mensal</label>
+        <input type="number" id="renda">
+        <br>
+        <button onclick="MostrarRenda()">Analisar renda</button>
+    </form>
+</body>
+
+<script>
+    function MostrarRenda() {
+        var valorRenda = renda.value;
+        
+        if(valorRenda<=250){
+            alert('Classe E');
+        } else if (valorRenda<=900) {
+            alert('Classe D');
+        } else if (valorRenda<=2500) {
+            alert('Classe C');
+        } else if (valorRenda<=9500) {
+            alert('Classe B');
+        } else {
+            alert('Classe A');
+        }
+    }
+</script>
+</html>

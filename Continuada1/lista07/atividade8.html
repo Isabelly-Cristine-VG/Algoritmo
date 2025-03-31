@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="login">
+    <br>
+    <input type="password" id="senha">
+    <br>
+    <button onclick="Verificar()">Entrar</button>
+</body>
+<script>
+    function Verificar() {
+        loginUsuario = login.value;
+        senhaUsuario = senha.value;
+        
+        if (loginUsuario == "sptech" && senhaUsuario == "digital"){
+            alert("Usuário autenticado com sucesso" );
+        } else {
+            alert("erro de autenticação")
+        }
+    }
+</script>
+</html>

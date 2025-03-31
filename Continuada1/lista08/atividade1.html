@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fruta">Informe a fruts:</label>
+        <input type="text" id="fruta">
+        <br>
+        <button onclick="Verificar()">Vai comer?</button>
+    </form>
+</body>
+<script>
+    function Verificar(){
+        var Fruta_Escolhida = fruta.value;
+        if(Fruta_Escolhida == "uva" || "abacaxi") {
+            alert(`Sim, vai comer ${Fruta_Escolhida}`);
+        } else {
+            alert(`A fruta ${Fruta_Escolhida} ela não come`);
+        }
+    }
+</script>
+</html>

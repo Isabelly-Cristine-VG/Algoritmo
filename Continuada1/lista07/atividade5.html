@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="nota">
+    <br>
+    <button onclick="Verificar()">Avaliar Aluno</button>
+    <br>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Verificar(){
+        var notaAluno = nota.value;
+
+        if(notaAluno <6){
+            resposta.innerHTML = `Aluno reprovado!`
+        } else if (notaAluno>= 8.5 && notaAluno<= 10 ){
+            resposta.innerHTML = `Aluno Exemplar!!`
+        } else {
+            resposta.innerHTML = `Aluno comum e aprovado!`
+        }
+    }
+</script>
+</html>

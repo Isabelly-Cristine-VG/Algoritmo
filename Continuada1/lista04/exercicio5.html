@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleExercicios.css">
+    <title>exercicio5</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="background">
+            <form action="">
+                <div>
+                    <label for="numero">Tabuada do:</label>
+                    <input type="text" id="numero">
+                    <button type="button" onclick="Tabuada()">Ver tabuada</button>
+                </div>
+            </form>
+            <form action="">
+                <div id="Resposta">
+                </div>
+            </form>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function Tabuada(){
+            var num = Number(numero.value);
+            var vezes2 = num*2;
+            var vezes3 = num*3;
+            var vezes4 = num*4;
+            var vezes5 = num*5;
+            var vezes6 = num*6;
+            var vezes7 = num*7;
+            var vezes8 = num*8;
+            var vezes9 = num*9;
+            Resposta.innerHTML = 
+            `
+                <h1>Tabuada do ${num}</h1>
+                <h3>${num} X 1 = ${num}</h3>
+                <h3>${num} X 2 = ${vezes2}</h3>
+                <h3>${num} X 3 = ${vezes3}</h3>
+                <h3>${num} X 4 = ${vezes4}</h3>
+                <h3>${num} X 5 = ${vezes5}</h3>
+                <h3>${num} X 6 = ${vezes6}</h3>
+                <h3>${num} X 7 = ${vezes7}</h3>
+                <h3>${num} X 8 = ${vezes8}</h3>
+                <h3>${num} X 9 = ${vezes9}</h3>
+            `
+        }
+    </script>
+</body>
+</html>

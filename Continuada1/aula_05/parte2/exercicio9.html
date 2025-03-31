@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="Sitcom">Sitcom assistida:</label>
+                    <input type="text" id="Sitcom">
+                    <label for="episodios">Episódios assistidos:</label>
+                    <input type="number" id="episodios">
+
+                    <button type="button" onclick="TempoSerie()">Verificar nivel</button>
+                </div>
+            </form>
+            <div id="resposta">
+            </div>
+            <div id="resposta2">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function TempoSerie(){
+            tempoAssistido = (episodios.value*22)/60;
+            resposta.innerHTML = `
+                <h3>Vejo que você gosta da série ${Sitcom.value}</h3>
+                <br>
+                `
+            if (tempoAssistido > 30) {
+                resposta2.innerHTML = `
+                <h3>Uau, você realmente gosta dessa série!</h3>
+                `
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleExercicios.css">
+    <title>exercicio3</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="background">
+            <form action="">
+                <div>
+                    <label for="sono">Horas de sono:</label>
+                    <input type="text" id="sono">
+                    <button type="button" onclick="CalcSono()">Calcular sono</button>
+                </div>
+            </form>
+            <form action="">
+                <div id="Resposta">
+                </div>
+            </form>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function CalcSono(){
+            var Sono = Number(sono.value);
+            var fase1 = Sono * 0.05;
+            var fase2 = Sono * 0.45;
+            var fase3 = Sono * 0.3;
+            var fase4 = Sono * 0.2;
+            Resposta.innerHTML = 
+            `
+                <h1>Ao dormir ${Sono} horas, você dormiu:</h1>
+                <h3>${fase1} horas na fase 1</h3>
+                <h3>${fase2} horas na fase 2</h3>
+                <h3>${fase3} horas na fase 3</h3>
+                <h3>${fase4} horas na fase REM</h3>
+            `
+        }
+    </script>
+</body>
+</html>

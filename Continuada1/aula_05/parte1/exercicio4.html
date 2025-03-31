@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 4</title>
+</head>
+<style type="text/css">
+    p{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="">digite o valor da pizza:</label>
+                    <input type="number" id="valorPizza">
+                    <label for="">digite a quantidade de amigos:</label>
+                    <input type="number" id="amigos">
+
+                    <button type="button" onclick="CalcPizza()">Rola a pizza?</button>
+                </div>
+            </form>
+            <div id="resposta">
+            </div>
+            <div class="resposta2" id="resposta2">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function CalcPizza(){
+            pizzaTotal = valorPizza.value/amigos.value;
+            resposta.innerHTML = `
+                <h1>cada amigo vai pagar R$${pizzaTotal} pela pizza</h1>
+                <br>
+                `
+            if(pizzaTotal>20.00){
+                resposta2.innerHTML = `
+                
+                <p><i><b>slk não compensa, muito cara</b></i></p>
+                `
+            }
+
+        }
+    </script>
+</body>
+</html>

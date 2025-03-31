@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="enem">Informe a nota do enem:</label>
+        <input type="text" id="enem">
+        <br>
+        <label for="vestibular">Informe a nota do vestibular interno:</label>
+        <input type="text" id="vestibular">
+        <br>
+        <button onclick="Verificar()">Avaliação</button>
+    </form>
+</body>
+<script>
+    function Verificar(){
+        var nota_enem = enem.value;
+        var nota_vestibular = vestibular.value;
+
+        if(nota_enem >=800 || nota_vestibular >= 700) {
+            alert(`Parabéns, aprovado!`)
+        } else {
+            alert(`Tente semestre que vem`)
+        }
+    }
+</script>
+</html>

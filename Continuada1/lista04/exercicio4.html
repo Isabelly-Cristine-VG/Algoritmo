@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styleExercicios.css">
+        <title>exercicio4</title>
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div class="background">
+                <form action="">
+                    <div>
+                        <label for="votosA">Votos do candidato A:</label>
+                        <input type="text" id="votosA">
+                        <label for="votosB">Votos do candidato B:</label>
+                        <input type="text" id="votosB">
+                        <label for="Branco">Votos em branco:</label>
+                        <input type="text" id="Branco">
+                        <label for="nulos">Votos nulos:</label>
+                        <input type="text" id="nulos">
+                        <button type="button" onclick="Resultado()">Resultado da eleição</button>
+                    </div>
+                </form>
+                <form action="">
+                    <div id="Resposta">
+                    </div>
+                </form>
+                <a href="index.html">Ir para home</a>
+            </div>
+        </div>
+    
+        <script>
+            function Resultado(){
+                var votosCandidatoA = Number(votosA.value);
+                var votosCandidatoB = Number(votosB.value);;
+                var votosBrancos = Number(Branco.value);
+                var votosInvalidos = Number(nulos.value)+votosBrancos;
+                var total = votosCandidatoA + votosCandidatoB + votosInvalidos;
+                var Atotal = (votosCandidatoA/total)*100;
+                var Btotal = (votosCandidatoB/total)*100;
+                var inválidos = (votosInvalidos/total)*100;
+
+
+                Resposta.innerHTML = 
+                `
+                    <h1>Total de votos: ${total}</h1>
+                    <h3>Candidato A: ${Atotal}% (${votosCandidatoA}) votos</h3>
+                    <h3>Candidato B: ${Btotal}% (${votosCandidatoB}) votos</h3>
+                    <h3>Votos inválidos: ${inválidos}% (${votosInvalidos} votos)</h3>
+                    
+                `
+            }
+        </script>
+    </body>
+</html>

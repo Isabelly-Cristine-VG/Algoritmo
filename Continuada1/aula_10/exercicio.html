@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Forma de pagamento:</label>
+    <input name="pagamento" type= "radio" id="radioDe"> Débito
+    <input name="pagamento" type= "radio" id="radioBo"> Boleto
+    <input name="pagamento" type= "radio" id="radioCre"> Crédito
+    <input name="pagamento" type= "radio" id="radioDi"> Dinheiro
+    <button onclick="verificar()">Analisar Pagamentos</button>
+</body>
+<script>
+    function verificar(){
+        var debito = radioDe.checked;
+        var boleto = radioBo.checked;
+        var credito = radioCre.checked;
+        var dinheiro = radioDi.checked;
+
+        if(debito || dinheiro) {
+            alert("Pagamento a vista")
+        } else if(boleto || credito) {
+            alert("Pagamento parcelado")
+        }
+    }
+</script>
+</html>

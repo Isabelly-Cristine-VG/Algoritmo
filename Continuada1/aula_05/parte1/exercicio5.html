@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 1</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="KWh">qtde de KWh consumida no mês:</label>
+                    <input type="text" id="KWh">
+
+                    <button type="button" onclick="calculo()">Calcular conta de luz</button>
+                </div>
+            </form>
+            <div id="resposta">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function calculo(){
+            kwh = Number(KWh.value);
+            contaLuz = kwh*0.85
+            if(kwh<100){
+                contaLuz = contaLuz-(contaLuz*0.1)
+            };
+            
+            alert(`R$${contaLuz} a serem pagos da conta de luz`);
+        }
+    </script>
+</body>
+</html>

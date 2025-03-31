@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="">digite o valor de 3 notas:</label>
+                    <input type="number" id="nota1">
+                    <input type="number" id="nota2">
+                    <input type="number" id="nota3">
+
+                    <button type="button" onclick="desempenho()">Analisar desempenho</button>
+                </div>
+            </form>
+            <div id="resposta">
+            </div>
+            <div id="resposta2">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function desempenho(){
+            total = Number(nota1.value)+Number(nota2.value)+Number(nota3.value);
+            media = total/3;
+            resposta.innerHTML = `
+                <h1>Sua média foi de: ${media}</h1>
+                <br>
+                `
+            if(media>=9.4){
+                resposta2.innerHTML = `
+                <h1>Parabéns, você é fora de série!</h1>
+                `
+            }
+
+        }
+    </script>
+</body>
+</html>

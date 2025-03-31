@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 2</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="refri">latinhas de refri por dia:</label>
+                    <input type="text" id="refri">
+
+                    <button type="button" onclick="QtdeRefri()">Quantos refris?</button>
+                </div>
+            </form>
+            <div id="resposta">
+            </div>
+            <div id="resposta2">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function QtdeRefri(){
+            Refris = Number(refri.value);
+            totalPorAno = 365*Refris;
+            resposta.innerHTML = `
+                <h1>${totalPorAno} refris por ano!</h1>
+                <br>
+                `
+            if(totalPorAno>500){
+                resposta2.innerHTML = `
+                <h1>Cuidado com a diabetes!</h1>
+                `
+            }
+
+        }
+    </script>
+</body>
+</html>

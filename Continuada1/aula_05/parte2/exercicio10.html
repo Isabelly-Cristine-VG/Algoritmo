@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>exercicio 3</title>
+</head>
+<style type="text/css">
+    .p1{
+        color: black;
+    }
+    .p2{
+        color: red;
+    }
+    .p3{
+        color: blue;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            
+            <form action="">
+                <div>
+                    <label for="saldoConta">Saldo da conta:</label>
+                    <input type="number" id="saldoConta">
+
+                    <button type="button" onclick="financas()">Verificar Finanças</button>
+                </div>
+            </form>
+            <div id="resposta">
+
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        function financas(){
+            saldoTotal = saldoConta.value;
+            if(saldoTotal == 0){
+            resposta.innerHTML = `
+                <p class="p1">Conta zerada</p>
+                `
+            } 
+            if (saldoTotal < 0) {
+                resposta.innerHTML = `
+                <p class="p2">Está devendo!</p>
+                `
+            }
+            if (saldoTotal > 0) {
+                resposta.innerHTML = `
+                <p class="p3">Saldo positivo! sorriso</p>
+                `
+            }
+
+        }
+    </script>
+</body>
+</html>

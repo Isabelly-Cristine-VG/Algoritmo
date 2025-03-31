@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleExercicios.css">
+    <title>exercicio2</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="background">
+            <form action="">
+                <div>
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor">
+
+                    <button type="button" onclick="deposito()">depositar</button>
+                    <button type="button" onclick="retiro()">Retirada</button>
+                </div>
+            </form>
+            <div id="Saldo">
+            </div>
+            <a href="index.html">Ir para home</a>
+        </div>
+    </div>
+
+    <script>
+        saldo = 0;
+        function deposito(){
+            saldo = saldo + Number(valor.value);
+            alert(`Depósito de R$${valor.value} efetuado! Saldo atual: R$${saldo} `);
+        }
+        function retiro(){
+            saldo = saldo - valor.value;
+            alert(`Retirada de R$${valor.value} efetuado! Saldo atual: R$${saldo} `);
+        }
+    </script>
+</body>
+</html>

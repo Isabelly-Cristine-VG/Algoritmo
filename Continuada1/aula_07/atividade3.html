@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="temperatura">Informe a temperatura:</label>
+    <input type="text" id="temperatura">
+    <br>
+    <button onclick="Clima()">Enviar</button>
+
+    <div id="resposta">
+    </div>
+</body>
+<script>
+    function Clima(){
+        var valorTemperatura = Number(temperatura.value);
+        if (valorTemperatura<14) {
+            resposta.innerHTML = `<h3>Congelante</h3>`
+        } else if (valorTemperatura<21) {
+           resposta.innerHTML = `<h3>Com Frio </h3>`
+        } else if (valorTemperatura<24) {
+           resposta.innerHTML = `<h3>Confortável</h3>`
+        } else if (valorTemperatura<31) {
+           resposta.innerHTML = `<h3>Com Calor </h3>`
+        } else {
+           resposta.innerHTML = `<h3>Calor escaldante</h3>`
+        }
+    }
+</script>
+
+</html>

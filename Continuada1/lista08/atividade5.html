@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Informe a temperatura:</label>
+        <input type="text" id="temperatura">
+        <br>
+        <button onclick="Verificar()">Analisar clima</button>
+    </form>
+</body>
+<script>
+    function Verificar(){
+        var Temperatura = temperatura.value;
+
+        if(Temperatura < 21 || Temperatura > 24){
+            alert("Alerta de desconforto!")
+
+            if(Temperatura <21){
+                alert("As pessoas vão ter hipotermia");
+            } else {
+                alert("As pessoas vão derreter");
+            }
+        }
+    }
+</script>
+</html>
