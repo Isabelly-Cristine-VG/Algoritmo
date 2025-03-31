@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="pessoas">Quantas pessoas vão viajar?</label>
+    <input type="number" name="" id="pessoas">
+    <button onclick="Mostrar()">Partiu Carona</button>
+    <br>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Mostrar(){
+        QuantPessoas = pessoas.value;
+        frase = ``;
+        resposta.innerHTML = frase;
+        for (i = 1; i<= QuantPessoas; i++){
+            if (i == 1) {
+                frase += `Entrou o ${i}º passageiro (que é o(a) motorista)<br>`
+            } else if (i >=2 && i <= 5) {
+                frase += `Entrou o ${i}º passageiro <br>`
+            } else {
+                frase += `O ${i}º passageiro terá que esperar!<br>`;    
+            }
+        }
+        resposta.innerHTML = frase;
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Informe um intervalo de numeros</label>
+    <input type="number" id="num1">
+    <br>
+    <input type="number" id="num2">
+    <br>
+    <button onclick="Pares()">S2 pares</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Pares(){
+        intervalo = num2.value
+        for (i = num1.value; i<= intervalo; i+=2) {
+            resposta.innerHTML += `<h3>${i}</h3>`
+        }
+    }
+</script>
+</html>

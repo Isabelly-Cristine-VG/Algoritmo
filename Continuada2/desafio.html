@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Informe a quantidade de marinheiros:</label>
+    <input type="number" name="" id="marinheiros">
+    <br>
+    <label for="">Informe a quantidade de carne reserva:</label>
+    <input type="number" name="" id="carne">
+    <br>
+    <label for="">Informe a quantidade de batalhas:</label>
+    <input type="number" name="" id="batalhas">
+    <br>
+    <button onclick="batalha()">Resultado da batalha</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    var energiaLuffy = 100;
+    function batalha() {
+        qtdeMarinheiros = marinheiros.value;
+        qtdeCarne = carne.value;
+        qtdeBatalhas = batalhas.value;
+        frase = ``;
+        resposta.innerHTML = frase;
+        luffy = 20;
+        for (i = 1; i <= qtdeBatalhas; i++) {
+            while(luffy >= qtdeMarinheiros) {
+                energiaLuffy -= 5;
+                qtdeMarinheiros -= 1;
+                luffy -= 1;
+                if (energiaLuffy == 0 && qtdeCarne > 0) {
+                    qtdeCarne -= 1;
+                    energiaLuffy += 100;
+                    luffy += 5;
+                } if (energiaLuffy <= 0 && qtdeMarinheiros > 0) {
+                    frase += `${i} batalha <br> Luffy foi derrotado, comeu ${qtdeCarne} carne(s), derrotou ${qtdeMarinheiros} marinheiro(s) e sobrou ${energiaLuffy} pontos de energia <br> `;
+                } else {
+                    frase += `${i} batalha <br> Luffy foi vitorioso, comeu ${qtdeCarne} carne(s), derrotou ${qtdeMarinheiros} marinheiro(s) e sobrou ${energiaLuffy} pontos de energia <br>`;
+                }
+            }
+            energiaLuffy -= 10;
+            luffy -= 5;
+        }
+        resposta.innerHTML = frase;
+    }
+</script>
+
+</html>

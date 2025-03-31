@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Quantos depósitos foram feitos?</label>
+    <input type="number" id="depositos">
+    <br>
+    <label for="">Qual o valor dos depósitos?</label>
+    <input type="number" id="valor">
+    <br>
+    <button onclick="Calcular()">Acompanhar grana</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Calcular(){
+        mesDeposito = depositos.value;
+        valorDeposito = Number(valor.value);
+        saldo = 0;
+        resposta.innerHTML = ``;
+        for(i = 1; i <= mesDeposito; i++){
+            saldo += valorDeposito;
+            if(i % 3 == 0) {
+                saldo = saldo+(saldo*0.01);
+                resposta.innerHTML += `${i}º mês: R$ ${saldo} <img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="" width="15"> <br>`; 
+            } else {
+                resposta.innerHTML += `${i}º mês: R$ ${saldo} <br>`; 
+            }
+            
+            
+        }
+        resposta.innerHTML += `Total guardado: R$${saldo}`;
+    }
+</script>
+</html>

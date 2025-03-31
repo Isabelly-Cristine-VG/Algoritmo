@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Diga algo sobre a matéria de algoritmo:</label>
+    <input type="text" name="" id="frase">
+    <br>
+    <button onclick="Mostrar()">mostrar</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Mostrar(){
+        var FraseAlgoritmo = frase.value;
+        for (i=0; i<7; i++) {
+            resposta.innerHTML += `<h4>${FraseAlgoritmo}</h4>`
+        }
+    }
+</script>
+</html>

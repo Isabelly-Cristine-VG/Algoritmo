@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Quantas xícaras de café com leite você já bebeu?</label>
+    <input type="number" id="cafe">
+    <button onclick="Exibir()">Ver quantidade</button>
+    <div id="resposta_cafe"></div>
+    <div id="resposta_leite"></div>
+</body>
+<script>
+    function Exibir() {
+        qtdeCafe = cafe.value;
+        resposta_cafe.innerHTML = ``;
+        resposta_leite.innerHTML = ``;
+        for(i = 0; i < qtdeCafe; i++) {
+            resposta_cafe.innerHTML += `colher de café<br>`;
+            resposta_cafe.innerHTML += `colher de café<br>`;
+            resposta_leite.innerHTML += `colher de leite<br>`;
+        }
+    }
+</script>
+</html>

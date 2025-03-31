@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Quantas coca-colas você já bebeu?</label>
+    <input type="number" id="coca">
+    <button onclick="Exibir()">Ver quantidade</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Exibir() {
+        qtdeCoca = coca.value;
+        frase = ``;
+        resposta.innerHTML = frase;
+        for(i = 1; i <= qtdeCoca; i++) {
+            frase += `${i} garrafas de coca-cola<br>`
+        }
+        resposta.innerHTML = frase;
+    }
+</script>
+</html>

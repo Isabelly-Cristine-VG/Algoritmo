@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simulador de prefrências</h1>
+    <label for="tamanho">Tamanho do celular encontrado</label>
+    <input type="text" id="tamanho">
+    <br>
+    <label for="">Qual a cor do celular encontrado?</label>
+    <input type="radio" name="cor" id="preto"> preto
+    <input type="radio" name="cor" id="prata"> prata
+    <input type="radio" name="cor" id="vermelho"> vermelho
+    <input type="radio" name="cor" id="azul"> azul
+    <br>
+    <button onclick="Verificar()">Será que ele gosta?</button>
+    <br>
+    <div id="resposta"></div>
+
+</body>
+<script>
+    function Verificar(){
+        var tamanhoCelular = tamanho.value;
+        var corPreto = preto.checked;
+        var corPrata = prata.checked;
+        var corVermelho = vermelho.checked;
+        var corAzul = azul.checked;
+
+        if(tamanhoCelular > 6.5 && (corPreto || corPrata)) {
+            resposta.innerHTML = `<img src="imagens/imagemFeliz.jpeg">`;
+        } else {
+            resposta.innerHTML = `<img src="imagens/imagemTriste.jpeg">`;
+        }
+
+    }
+</script>
+</html>

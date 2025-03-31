@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Informe o número a ser multiplicado(entre 2 e 9)</label>
+    <input type="number" id="num1">
+    <br>
+    <label for="">até onde o número deve ser multiplicado?</label>
+    <input type="number" id="num2">
+    <br>
+    <button onclick="Tabuada()">Ver Tabuada</button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Tabuada(){
+        multiplicado = num1.value;
+        multiplicador = num2.value
+
+        for (i = 1; i<=multiplicador; i++) {
+            if (i % 2 == 0) {
+                resposta.innerHTML += `<h3 style="color: blue;">${multiplicado}X${i}=${multiplicado * i}</h3>`
+            } else {
+                resposta.innerHTML = resposta.innerHTML += `<h3 style="color: red;">${multiplicado}X${i}=${multiplicado * i}</h3>`
+            }
+        }
+        
+    }
+</script>
+</html>
